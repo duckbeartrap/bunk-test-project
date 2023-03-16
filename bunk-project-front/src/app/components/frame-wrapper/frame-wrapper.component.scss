@@ -1,0 +1,15 @@
+:host{
+    width: 100%;
+    max-width: 500px;
+}
+
+.et{
+    &-frame{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #E0E0E0;
+        border-radius: 6px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,19 @@
+    <form class="et-form" [formGroup]="addExpenseForm">
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input data-cy="name-input" type="text" matInput formControlName="name" placeholder="Ex. John">
+            <mat-error *ngIf="addExpenseForm.hasError('name') && !addExpenseForm.hasError('required')">
+                Please enter a valid name
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Amount</mat-label>
+            <input data-cy="amount-input" type="number" matInput formControlName="amount" placeholder="Ex. 100">
+            <mat-error *ngIf="addExpenseForm.hasError('amount') && !addExpenseForm.hasError('required')">
+                Please enter a valid number
+            </mat-error>
+        </mat-form-field>
+        
+        <button data-cy="submit-expense-button" mat-raised-button color="primary" [disabled]="!addExpenseForm.valid" (click)="addExpense()">Add Expense</button>
+    </form>

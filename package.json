@@ -1,0 +1,15 @@
+{
+  "name": "bunk-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd bunk-project-back && npm start & cd bunk-project-front && ng serve",
+    "install-all": "cd bunk-project-front && npm install & cd bunk-project-back && npm install",
+    "test": "cd bunk-project-back && npm test",
+    "e2e": "cd bunk-project-front && npm run e2e"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

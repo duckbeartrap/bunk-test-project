@@ -1,0 +1,15 @@
+<div class="et-settleExpenses__container">
+    <button data-cy="settle-expenses-button" mat-raised-button color="secondary" (click)="settleUp()">Settle Up</button>
+    <ng-container *ngIf="data$ | async as data; else noData">
+        <div data-cy="payouts-list" class="et-settleExpenses__list">
+            <div class="et-settleExpenses__list__item" *ngFor="let payout of data?.payouts">
+                {{payout | transformPayout}}
+            </div>
+        </div>
+    </ng-container>
+    <ng-template #noData>
+        <div class="et-settleExpenses__list__item" >
+            <span>No Payments</span>
+        </div>
+    </ng-template>
+</div>
